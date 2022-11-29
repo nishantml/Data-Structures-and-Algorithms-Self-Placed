@@ -16,3 +16,5 @@ function Palindrome(num){
 
 
 console.log(Palindrome(123))
+
+// time complexity -> theta of d -> d is the number digits
