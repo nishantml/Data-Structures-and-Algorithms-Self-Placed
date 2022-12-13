@@ -10,9 +10,7 @@ function moveZeroToEnd(arr){
             }
         }
     }
-
     return arr
-
 }
 
 console.log(moveZeroToEnd([1,0,0,3,3,4]))
