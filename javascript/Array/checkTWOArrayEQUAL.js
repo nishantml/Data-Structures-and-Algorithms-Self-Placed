@@ -15,7 +15,35 @@ class Solution {
         return 1
     }
 
+    // optimal solution
+    checkOptimalSol(A,B,N){
+        const AHash = {}
+        for(let i = 0;i<N;i++){
+            if(AHash[A[i]]){
+                AHash[A[i]] = AHash[A[i]] + 1
+            }else{
+                AHash[A[i]] = 1
+            }
+        }
+        for(let i = 0;i<N;i++){
+            if(AHash[B[i]]){
+                AHash[B[i]] = AHash[B[i]] - 1
+            }
+        }
+        for (let key in AHash) {
+            if(AHash[key] != 0){
+                return 0
+            }
+        }
+        return 1
+
+
+    }
+
 }
 
-const sol = new Solution().check([2,2,5,4,0],[2,4,5,0,1],5)
+const ins = new Solution()
+const sol = ins.check([2,2,5,4,0],[2,4,5,0,1],5)
+const OptimalSol = ins.checkOptimalSol([2,2,5,4,0],[2,4,5,0,1],5)
 console.log("sol:: ",sol)
+console.log("OptimalSol:: ",OptimalSol)
