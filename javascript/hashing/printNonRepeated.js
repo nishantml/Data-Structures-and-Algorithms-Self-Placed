@@ -26,8 +26,29 @@ class Solution {
         }
         return nonRepeatedArr
     }
+
+    printNonRepeatedSameOrder(arr, n)
+    {
+        // return the elements in same order as they appear in input array
+        let nonRepeatedArr = []
+        let Hash = {}
+        for(let i = 0;i< n; i++){
+            if(Hash[arr[i]]){
+                Hash[arr[i]] +=1
+            }else{
+                Hash[arr[i]] = 1
+            }
+        }
+        // console.log(Hash)
+        for(let i = 0;i<n;i++){
+            if(Hash[arr[i]] === 1){
+                nonRepeatedArr.push(arr[i])
+            }
+        }
+        return nonRepeatedArr
+    }
 }
 
-// const sol = new Solution().countNonRepeated([1,3,3,3,4],5)
+// const sol = new Solution().printNonRepeatedSameOrder([1,3,3,3,4],5)
 const sol = new Solution().printNonRepeated([3,0,2,2,1,2,3,3],8)
 console.log("sol:: ",sol)
