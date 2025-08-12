@@ -1,3 +1,5 @@
+package string;
+
 public class Odds {
     public static void main(String[] args) {
 //        String num = "39427";
