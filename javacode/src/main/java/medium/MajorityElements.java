@@ -2,9 +2,9 @@ package medium;
 
 import java.sql.Array;
 import java.util.*;
-
+//https://leetcode.com/problems/majority-element-ii/description/
 public class MajorityElements {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
 //        int[] nums = {1,2,2,3,2};
         int[] nums =  {11,33,33,11,33,11};
