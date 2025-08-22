@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//https://takeuforward.org/plus/dsa/problems/find-the-repeating-and-missing-number
 public class FindMissingRepeatingNumbers {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 6, 7, 5, 7};
